@@ -91,7 +91,20 @@
       font-size: 1.18rem;
     }
 
- .nav-links {
+    .brand-mark {
+      width: 40px;
+      height: 40px;
+      border-radius: 14px;
+      background:
+        linear-gradient(135deg, rgba(84, 240, 192, 0.95), rgba(113, 199, 255, 0.9));
+      display: grid;
+      place-items: center;
+      color: #061318;
+      box-shadow: 0 12px 36px rgba(84, 240, 192, 0.28);
+      font-weight: 900;
+    }
+
+    .nav-links {
       display: flex;
       align-items: center;
       gap: 22px;
@@ -656,23 +669,7 @@
     }
 
     @media (max-width: 940px) {
-      .brand-logo-svg {
-      width: 44px;
-      height: 44px;
-      display: block;
-    }
-
-    .brand-word-cell { color: #8bb63f; }
-    .brand-word-passport { color: var(--text); }
-    .logo-shield { fill: #0f2a33; stroke: rgba(213, 255, 241, 0.5); stroke-width: 5; }
-    .logo-battery { fill: #ffffff; }
-    .logo-bolt { fill: #54f0c0; }
-    .logo-recycle { fill: none; stroke: #a8c94a; stroke-width: 10; stroke-linecap: round; stroke-linejoin: round; }
-    .logo-leaf { fill: #a8c94a; }
-    .logo-heart { fill: #ff4d4d; }
-    .logo-pulse { fill: none; stroke: #071217; stroke-width: 8; stroke-linecap: round; stroke-linejoin: round; }
-
-    .nav-links {
+      .nav-links {
         display: none;
       }
 
@@ -761,7 +758,7 @@
     }
     .dashboard-top { height: 58px; background: #4f86c4; display: flex; align-items: center; justify-content: space-between; padding: 0 18px; color: #061318; border-bottom: 2px solid rgba(0,0,0,.25); }
     .dash-logo { display: flex; align-items: center; gap: 8px; font-weight: 850; font-size: .9rem; }
-    .dash-logo-mark { width: 32px; height: 32px; display: inline-flex; align-items: center; justify-content: center; }
+    .dash-logo-mark { width: 26px; height: 26px; border-radius: 8px; background: linear-gradient(135deg,#54f0c0,#71c7ff); display: grid; place-items: center; font-size: .68rem; font-weight: 900; }
     .dash-title { font-size: 1.22rem; font-weight: 850; letter-spacing: -.04em; }
     .dash-close { font-size: 2rem; line-height: 1; opacity: .75; }
     .dashboard-body { padding: 18px; display: grid; grid-template-columns: .88fr 1.12fr; gap: 14px; align-items: stretch; }
@@ -802,18 +799,8 @@
   <header class="topbar">
     <div class="container nav">
       <a href="#top" class="brand" aria-label="CellPassport home">
-        <span class="brand-mark" aria-hidden="true">
-          <svg class="brand-logo-svg" viewBox="0 0 220 220">
-            <path class="logo-shield" d="M110 9 C137 37 165 49 199 51 C206 52 212 58 212 66 C211 126 180 174 110 211 C40 174 9 126 8 66 C8 58 14 52 21 51 C55 49 83 37 110 9 Z" />
-            <path class="logo-battery" d="M93 57 h34 c5 0 9 4 9 9 v10 h13 c7 0 12 5 12 12 v72 c0 7 -5 12 -12 12 h-78 c-7 0 -12 -5 -12 -12 v-72 c0 -7 5 -12 12 -12 h13 v-10 c0 -5 4 -9 9 -9 Z M79 94 v60 h62 v-60 Z" />
-            <path class="logo-bolt" d="M106 91 L173 122 L126 123 L139 164 L72 115 L117 116 Z" />
-            <path class="logo-recycle" d="M45 101 C49 84 61 76 76 78 M76 78 L68 66 M76 78 L62 83 M39 123 C50 137 67 139 81 130 M81 130 L79 146 M81 130 L66 133 M86 94 C95 109 92 124 81 134" />
-            <path class="logo-leaf" d="M72 116 C84 100 100 102 108 98 C106 118 93 132 75 134 C78 126 82 121 90 115 C82 117 77 119 72 116 Z" />
-            <path class="logo-heart" d="M169 79 C158 69 140 75 140 92 C140 113 169 132 169 132 C169 132 198 113 198 92 C198 75 180 69 169 79 Z" />
-            <path class="logo-pulse" d="M149 103 H160 L166 88 L174 114 L181 103 H193" />
-          </svg>
-        </span>
-        <span><span class="brand-word-cell">Cell</span><span class="brand-word-passport">Passport</span></span>
+        <span class="brand-mark">CP</span>
+        <span>CellPassport</span>
       </a>
 
       <nav class="nav-links" aria-label="Main navigation">
@@ -853,7 +840,7 @@
         <aside class="hero-panel" aria-label="CellPassport diagnostic dashboard illustration">
           <div class="dashboard-visual">
             <div class="dashboard-top">
-              <div class="dash-logo"><span class="dash-logo-mark" aria-hidden="true"><svg class="brand-logo-svg" viewBox="0 0 220 220"><path class="logo-shield" d="M110 9 C137 37 165 49 199 51 C206 52 212 58 212 66 C211 126 180 174 110 211 C40 174 9 126 8 66 C8 58 14 52 21 51 C55 49 83 37 110 9 Z" /><path class="logo-battery" d="M93 57 h34 c5 0 9 4 9 9 v10 h13 c7 0 12 5 12 12 v72 c0 7 -5 12 -12 12 h-78 c-7 0 -12 -5 -12 -12 v-72 c0 -7 5 -12 12 -12 h13 v-10 c0 -5 4 -9 9 -9 Z M79 94 v60 h62 v-60 Z" /><path class="logo-bolt" d="M106 91 L173 122 L126 123 L139 164 L72 115 L117 116 Z" /><path class="logo-recycle" d="M45 101 C49 84 61 76 76 78 M76 78 L68 66 M76 78 L62 83 M39 123 C50 137 67 139 81 130 M81 130 L79 146 M81 130 L66 133 M86 94 C95 109 92 124 81 134" /><path class="logo-leaf" d="M72 116 C84 100 100 102 108 98 C106 118 93 132 75 134 C78 126 82 121 90 115 C82 117 77 119 72 116 Z" /><path class="logo-heart" d="M169 79 C158 69 140 75 140 92 C140 113 169 132 169 132 C169 132 198 113 198 92 C198 75 180 69 169 79 Z" /><path class="logo-pulse" d="M149 103 H160 L166 88 L174 114 L181 103 H193" /></svg></span> CellPassport</div>
+              <div class="dash-logo"><span class="dash-logo-mark">CP</span> CellPassport</div>
               <div class="dash-title">CellPassport 1.0</div>
               <div class="dash-close">×</div>
             </div>
@@ -1142,11 +1129,13 @@
         <div class="team-grid">
           <article class="card person">
             <div>
-              <img class="avatar" src="https://vbn.aau.dk/files-asset/799813467/TarekMahmoudSamyMKIbrahim.jpg?f=jpg&w=320" alt="Dr. Tarek Ibrahim" loading="lazy" onerror="this.outerHTML='<div class=&quot;avatar-fallback&quot;>TI</div>'" />
+              <!-- Replace the src below with the direct IEEE profile image URL when available. Do not use the IEEE profile page URL itself as an image source. -->
+              <img class="avatar" src="https://vbn.aau.dk/files-asset/799813467/TarekMahmoudSamyMKIbrahim.jpg" alt="Dr. Tarek Ibrahim" loading="lazy" onerror="this.outerHTML='<div class=&quot;avatar-fallback&quot;>TI</div>'" />
               <h3>Dr. Tarek Mahmoud Samy Mostafa Ibrahim</h3>
               <div class="person-title">Founder / Principal Investigator</div>
               <p>Battery diagnostics, passive EIS, digital twin architecture, and cloud-based CellPassport concept development.</p>
             </div>
+            <a class="source-link" href="https://vbn.aau.dk/en/persons/tarek-mahmoud-samy-mostafa-kamal-ibrahim" target="_blank" rel="noopener">Profile <span>↗</span></a>
           </article>
 
           <article class="card person">
@@ -1156,6 +1145,7 @@
               <div class="person-title">Scientific advisor / Co-PI</div>
               <p>Power electronics, energy systems, and research leadership for CellPassport-related AAU activities.</p>
             </div>
+            <a class="source-link" href="https://vbn.aau.dk/en/persons/tam%C3%A1s-kerekes" target="_blank" rel="noopener">Profile <span>↗</span></a>
           </article>
 
           <article class="card person">
@@ -1165,6 +1155,7 @@
               <div class="person-title">Battery diagnostics & online EIS</div>
               <p>Research contributor in battery diagnostics, online EIS, state estimation, and battery passport frameworks.</p>
             </div>
+            <a class="source-link" href="https://vbn.aau.dk/en/persons/muhammad-usman-tahir" target="_blank" rel="noopener">Profile <span>↗</span></a>
           </article>
 
           <article class="card person">
@@ -1172,4 +1163,50 @@
               <img class="avatar" src="https://vbn.aau.dk/files-asset/721666119/AbderezakLashab.jpg?f=jpg&w=320" alt="Dr. Abderezak Lashab" loading="lazy" onerror="this.outerHTML='<div class=&quot;avatar-fallback&quot;>AL</div>'" />
               <h3>Dr. Abderezak Lashab</h3>
               <div class="person-title">Scientific advisor</div>
-              <p>Assistant Professor at AAU Energy with expertise across micr
+              <p>Assistant Professor at AAU Energy with expertise across microgrids, photovoltaics, battery-related energy systems, predictive control, and energy management.</p>
+            </div>
+            <a class="source-link" href="https://vbn.aau.dk/en/persons/142287/" target="_blank" rel="noopener">Profile <span>↗</span></a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="container">
+        <div class="cta">
+          <div>
+            <div class="section-kicker">Let’s build the battery passport layer</div>
+            <h2>Ready to turn battery data into lifecycle intelligence?</h2>
+            <p>
+              Contact CellPassport to discuss pilots for EV packs, BESS assets, battery passport reporting, passive EIS diagnostics, and second-life battery grading.
+            </p>
+          </div>
+          <a class="btn btn-primary" href="mailto:contact@cellpassport.eu?subject=CellPassport%20pilot%20or%20demo%20request">Contact CellPassport</a>
+        </div>
+
+        <div class="contact-card">
+          <div class="contact-item">
+            <span>Website</span>
+            <strong>CellPassport.eu</strong>
+          </div>
+          <div class="contact-item">
+            <span>Email</span>
+            <strong>contact@cellpassport.eu</strong>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-grid">
+      <div>© <span id="year"></span> CellPassport. All rights reserved.</div>
+      <div>Battery Passport • Passive EIS • Per-cell digital twins • SoX analytics</div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
